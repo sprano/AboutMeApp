@@ -95,11 +95,10 @@
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
-        <!--View Controller-->
+        <!--Log In Allowed View Controller-->
         <scene sceneID="KrV-1d-gea">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="huR-DB-V2H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="hSF-LC-Ge3" sceneMemberID="viewController">
+                <viewController id="hSF-LC-Ge3" customClass="LogInAllowedViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ykK-wa-pjK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,6 +127,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Log Out">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="logOutWasTapped" destination="hSF-LC-Ge3" eventType="touchUpInside" id="plC-qI-e3N"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WEg-1R-kFE"/>
@@ -139,7 +141,12 @@
                             <constraint firstItem="OI6-p1-8kJ" firstAttribute="centerX" secondItem="ykK-wa-pjK" secondAttribute="centerX" id="x9d-cI-FY1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="logOutButton" destination="TD8-3R-b69" id="wlt-uA-ipK"/>
+                        <outlet property="welcomeMessage" destination="aJD-23-Oqw" id="NmN-9t-6oA"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="huR-DB-V2H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="887.78625954198469" y="-2.1126760563380285"/>
         </scene>

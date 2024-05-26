@@ -13,6 +13,7 @@
 		77D747F12BFDFE63001762AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77D747EF2BFDFE63001762AF /* Main.storyboard */; };
 		77D747F32BFDFE64001762AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77D747F22BFDFE64001762AF /* Assets.xcassets */; };
 		77D747F62BFDFE64001762AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77D747F42BFDFE64001762AF /* LaunchScreen.storyboard */; };
+		77D747FE2C0350B0001762AF /* LogInAllowedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D747FD2C0350B0001762AF /* LogInAllowedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		77D747F22BFDFE64001762AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77D747F52BFDFE64001762AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77D747F72BFDFE64001762AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77D747FD2C0350B0001762AF /* LogInAllowedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInAllowedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				77D747E92BFDFE63001762AF /* AppDelegate.swift */,
 				77D747EB2BFDFE63001762AF /* SceneDelegate.swift */,
 				77D747ED2BFDFE63001762AF /* MainViewController.swift */,
+				77D747FD2C0350B0001762AF /* LogInAllowedViewController.swift */,
 				77D747EF2BFDFE63001762AF /* Main.storyboard */,
 				77D747F22BFDFE64001762AF /* Assets.xcassets */,
 				77D747F42BFDFE64001762AF /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				77D747EE2BFDFE63001762AF /* MainViewController.swift in Sources */,
 				77D747EA2BFDFE63001762AF /* AppDelegate.swift in Sources */,
+				77D747FE2C0350B0001762AF /* LogInAllowedViewController.swift in Sources */,
 				77D747EC2BFDFE63001762AF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

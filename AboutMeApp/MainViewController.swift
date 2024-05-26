@@ -16,24 +16,31 @@ final class MainViewController: UIViewController {
     @IBOutlet var userNameHint: UIButton!
     @IBOutlet var passwordHint: UIButton!
     
+    var login = "Sofia"
+    var password = "12345"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let messageVC = segue.destination as? LogInAllowedViewController
+        messageVC?.correctUsername = userNameTextField.text
+    }
+    
     @IBAction func logInWasTapped() {
-        if userNameTextField.text == "sofia" && passwordTextField.text == "12345" {
-            print("correct")
+        if userNameTextField.text == login && passwordTextField.text == password {
         } else {
             showAlert(withTitle: "Invalid login or password", andMessage: "Please, enter correct login and password")
         }
     }
     
     @IBAction func showUserNameHint() {
-        showAlert(withTitle: "Oops!", andMessage: "Your name is sofia")
+        showAlert(withTitle: "Oops!", andMessage: "Your name is \(login)")
     }
     
     @IBAction func showPasswordHint() {
-        showAlert(withTitle: "Oops!", andMessage: "Your password is 12345")
+        showAlert(withTitle: "Oops!", andMessage: "Your password is \(password)")
     }
     
     private func showAlert(withTitle title: String, andMessage message: String) {
