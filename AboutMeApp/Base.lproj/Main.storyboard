@@ -12,7 +12,7 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Main View Controller" customClass="MainViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Main View Controller" customClass="LoginViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
-        <!--Log In Allowed View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="KrV-1d-gea">
             <objects>
-                <viewController id="hSF-LC-Ge3" customClass="LogInAllowedViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hSF-LC-Ge3" customClass="WelcomeViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ykK-wa-pjK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,7 +109,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJD-23-Oqw">
                                         <rect key="frame" x="0.0" y="0.0" width="228.33333333333334" height="33.666666666666664"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <color key="textColor" systemColor="tintColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILj-fI-GZ9">
@@ -122,13 +122,14 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TD8-3R-b69">
-                                <rect key="frame" x="157" y="577.33333333333337" width="100.33333333333331" height="40.333333333333371"/>
+                                <rect key="frame" x="157" y="627.33333333333337" width="100.33333333333331" height="40.333333333333371"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log Out">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="logOutWasTapped" destination="hSF-LC-Ge3" eventType="touchUpInside" id="plC-qI-e3N"/>
+                                    <segue destination="azh-bK-qld" kind="unwind" unwindAction="unwindFor:" id="ZOy-xx-DyK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -137,7 +138,7 @@
                         <constraints>
                             <constraint firstItem="TD8-3R-b69" firstAttribute="centerX" secondItem="ykK-wa-pjK" secondAttribute="centerX" id="F5E-fu-ced"/>
                             <constraint firstItem="OI6-p1-8kJ" firstAttribute="top" secondItem="WEg-1R-kFE" secondAttribute="top" constant="240" id="k5y-2P-TCM"/>
-                            <constraint firstItem="TD8-3R-b69" firstAttribute="centerY" secondItem="ykK-wa-pjK" secondAttribute="centerY" multiplier="4:3" id="sI0-yP-FRw"/>
+                            <constraint firstItem="TD8-3R-b69" firstAttribute="centerY" secondItem="ykK-wa-pjK" secondAttribute="centerY" multiplier="4:3" constant="50" id="sI0-yP-FRw"/>
                             <constraint firstItem="OI6-p1-8kJ" firstAttribute="centerX" secondItem="ykK-wa-pjK" secondAttribute="centerX" id="x9d-cI-FY1"/>
                         </constraints>
                     </view>
@@ -147,6 +148,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="huR-DB-V2H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="azh-bK-qld" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="887.78625954198469" y="-2.1126760563380285"/>
         </scene>
@@ -166,9 +168,6 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
